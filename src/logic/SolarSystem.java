@@ -1,6 +1,5 @@
 package logic;
 
-//import java.util.Random;
 import java.util.List;
 import java.util.LinkedList;
 import javax.swing.Timer;

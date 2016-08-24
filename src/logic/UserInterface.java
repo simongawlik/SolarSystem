@@ -4,7 +4,6 @@ import java.awt.Container;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
-//import wormgame.game.WormGame;
 import logic.DrawingBoard;
 
 public class UserInterface implements Runnable {
