@@ -1,21 +1,25 @@
 package logic;
 
 public class CelestialObject {
-	private int x;
-	private int y;
+	private PVector position;
 	//private int mass;
 	
-	public CelestialObject(int x, int y) {
-		this.x = x;
-		this.y = y;
+	public CelestialObject(double x, double y) {
+		this.position = new PVector(x, y);
 	}
 	
-	public int getX() {
-		return x;
+	public PVector getPosition() {
+		return position;
 	}
 	
-	public int getY() {
-		return y;
+	public void setPosition(PVector newPosition) {
+		this.position = newPosition;
+	}
+	
+	public double distanceFrom(CelestialObject other) {
+		double distanceX = this.position.getX() - other.position.getX();
+		double distanceY = this.position.getY() - other.position.getY();
+		return Math.sqrt(Math.pow(distanceX, 2) + Math.pow(distanceY, 2));
 	}
 	
 //	public int getMass() {

@@ -7,10 +7,11 @@ public class Main {
 	public static void main(String[] args) {
 		
 		// start solar system with sun
-		SolarSystem solarSystem = new SolarSystem(new Star(100, 100, 25));
+		Star sun = new Star(400, 400, 20);
+		SolarSystem solarSystem = new SolarSystem(sun);
 		
 		// add planets to the system
-		solarSystem.addPlanet(new Planet(200, 200, 5));
+		solarSystem.addPlanet(new Planet(400, 200, 10, 10, 5, sun));
 		
         UserInterface ui = new UserInterface(solarSystem);
         SwingUtilities.invokeLater(ui);

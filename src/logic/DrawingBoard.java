@@ -18,12 +18,12 @@ public class DrawingBoard extends JPanel implements Updatable {
     	super.paintComponent(graphics);
     	
         graphics.setColor(solarSystem.getSun().getColor());
-        graphics.fillOval(solarSystem.getSun().getX(), solarSystem.getSun().getY(), 
+        graphics.fillOval(solarSystem.getSun().getPosition().getX(), solarSystem.getSun().getPosition().getY(), 
         		solarSystem.getSun().getRadius() * 2, solarSystem.getSun().getRadius() * 2);
         
         for (Planet planet : solarSystem.getPlanets()) {
         	graphics.setColor(planet.getColor());
-        	graphics.fillOval(planet.getX(), planet.getY(), 
+        	graphics.fillOval(planet.getPosition().getX(), planet.getPosition().getY(), 
             		planet.getRadius() * 2, planet.getRadius() * 2);
         }
         	
