@@ -7,15 +7,20 @@ public class Planet extends CelestialObject {
 	private double radius;
 	private Color color;
 	private PVector velocity;
-	public double G = 40;
-	// private int mass;
+	public double G = 100;
+	private double mass;
 	
-	public Planet(double x, double y, double velocityX, double velocityY, double radius, Star sun) {
+	public Planet(double x, double y, double velocityX, double velocityY, double radius, double mass, Star sun) {
 		super(x, y);
 		velocity = new PVector(velocityX, velocityY);
 		this.radius = radius;
 		this.color = Color.BLUE;
 		this.orbitingStar = sun;
+		this.mass = mass;
+	}
+	
+	public double getMass() {
+		return mass;
 	}
 	
 	public PVector getVelocity() {
@@ -36,7 +41,7 @@ public class Planet extends CelestialObject {
 	
 	
 	public void move() {
-		PVector F = this.getPosition().mult(-G / Math.pow(this.distanceFrom(orbitingStar), 2));
+		PVector F = this.getPosition().mult(G / Math.pow(this.distanceFrom(orbitingStar), 2));
 		
 		velocity = velocity.add(F);
 		this.setPosition(this.getPosition().add(velocity));
