@@ -29,5 +29,8 @@ public class PVector {
 		return new PVector(x * scalar, y * scalar);
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "x: " + getX() + "; y: " + getY();
+	}
 }

@@ -11,7 +11,7 @@ public class Main {
 		SolarSystem solarSystem = new SolarSystem(sun);
 		
 		// add planets to the system
-		solarSystem.addPlanet(new Planet(400, 200, 0, 0, 5, 1, sun));
+		solarSystem.addPlanet(new Planet(400, 250, -26, 0, 5, 1, sun));
 		
         UserInterface ui = new UserInterface(solarSystem);
         SwingUtilities.invokeLater(ui);

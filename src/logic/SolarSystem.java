@@ -41,7 +41,6 @@ public class SolarSystem extends Timer implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
 		for (Planet planet : planets) {
 			planet.move();
-			System.out.println(planet.getPosition().getX());
 		}
 		updatable.update();
         setDelay(500);
