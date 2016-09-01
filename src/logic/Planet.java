@@ -7,7 +7,7 @@ public class Planet extends CelestialObject {
 	private double radius;
 	private Color color;
 	private PVector velocity;
-	public double G = 300;
+	public double G = 210;
 	private double mass;
 	
 	public Planet(double x, double y, double velocityX, double velocityY, double radius, double mass, Star sun) {
@@ -44,7 +44,7 @@ public class Planet extends CelestialObject {
 		// this doesn't seem to work. need to figure out scaling
 		System.out.println(this.getPosition());
 		System.out.println(Math.pow(this.distanceFrom(orbitingStar), 3));
-		PVector F = this.getPosition().mult(G / Math.pow(this.distanceFrom(orbitingStar), 3));
+		PVector F = this.getPosition().mult(G / Math.pow(this.distanceFrom(orbitingStar), 2));
 		
 		
 		
