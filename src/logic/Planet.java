@@ -7,7 +7,7 @@ public class Planet extends CelestialObject {
 	private double radius;
 	private Color color;
 	private PVector velocity;
-	public double G = 210;
+	public double G = 0.00006;
 	private double mass;
 	
 	public Planet(double x, double y, double velocityX, double velocityY, double radius, double mass, Star sun) {
