@@ -43,7 +43,6 @@ public class Planet extends CelestialObject {
 	public void move() {
 		// this doesn't seem to work. need to figure out scaling
 		System.out.println(this.getPosition());
-		//System.out.println(Math.pow(this.distanceFrom(orbitingStar), 3));
 		PVector F = this.getPosition().mult(G * this.mass * orbitingStar.getMass() / 1E9 / Math.pow(this.distanceFrom(orbitingStar), 2));
 		
 		
